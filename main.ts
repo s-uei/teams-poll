@@ -19,5 +19,5 @@ Deno.serve(async (req) => {
     return r({ text: `使い方: ${command} a b c` });
   }
   const chosen = items[Math.floor(Math.random() * items.length)];
-  return r({ text: `選ばれたのは ${chosen} でした。` });
+  return r({ text: `${items.join(",")}の内、選ばれたのは ${chosen} でした。` });
 });
